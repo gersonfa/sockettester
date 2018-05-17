@@ -1,0 +1,15 @@
+<div>
+  <form [formGroup]="userForm">
+    <input type="text" formControlName="email">
+    <input type="password" formControlName="password">
+    <button [disabled]="userForm.invalid" (click)="login()">Iniciar sesión</button>
+  </form>
+</div>
+
+<hr>
+
+<form [formGroup]="conversationForm">
+  <input type="text" formControlName="receiver">
+  <textarea formControlName="body"></textarea>
+  <button [disabled]="conversationForm.invalid" (click)="conversation_create()">Crear conversación</button>
+</form>
